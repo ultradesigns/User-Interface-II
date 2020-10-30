@@ -3,7 +3,7 @@
 *{
     box-sizing: border-box;
     max-width: 100%;
-    border: 1px solid grey;
+    border: 1px solid white;
 }
 
 html{
@@ -83,12 +83,6 @@ nav a{
     margin: 0 auto;
 }
 
-.imgSide{
-
-}
-
-.imgContainer{
-
 }
 
 h2{
@@ -125,23 +119,44 @@ p {
 
 /*lower center*/
 .imagesFlex{
-    height:200px;
-    width: 240px;
+    height:100%;
+    width: 100%;
     align-content: center;
+    flex-flow: row wrap;  
 }
 
-.imagesFlex{
-    display:flex;
-    justify-content: space-evenly;
-    width: 90%;
-    
-}
 
 .imgBox{
-    display: flex;
+    margin: 5px;
+    padding: 5px;
+    display: flex; 
+    align-content: center;
+    
+    
+}
 
-    
-    
+h2{
+    text-align: center;
+    width: 100%;
+    font-size: 3em;
+    color: blue;
+}
+
+#button2{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  section nav{
+    text-align: center;
+    width: 100%;
+  
+}
+
+.lower{
+    ;
 }
 
 
