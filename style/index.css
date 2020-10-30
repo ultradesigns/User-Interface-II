@@ -1,1 +1,124 @@
-/* Add CSS styling here */
+
+
+*{
+    box-sizing: border-box;
+    max-width: 100%;
+    border: 1px solid grey;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+/*header styles*/
+header{
+    width: 100%;
+    background-image:url("pexels-pixabay.jpg");
+}
+
+header{
+    border: 1px solid red;
+    background-color: gainsboro;
+    
+}
+
+h1{
+    font-size: 4rem;
+    margin: 20px;
+    color: #0000ff;
+}
+
+
+
+a {
+    text-decoration: none;
+    font-size: 2rem;
+    background-color: grey;
+    color: #ffffff;
+}
+
+a:hover{
+    background-color: blue;
+    color: #ffffff;
+}
+
+nav{
+    display: flex;
+    /*justify-content: wrap-around;*/
+    padding: .5% 0% 0% 0%;
+    margin: 25px 75% 25px 25px;
+    background-color: #ffffff;
+}
+
+nav a{
+    display: inline-block;
+    padding: .5% .5%;
+    margin: 12px;
+}
+
+/*Top center section*/
+.topCenter{
+    display: flex;
+    /*align-items: center;*/
+    height: 400px;
+}
+
+.top{
+    display:flex;
+    width: 40%;
+   
+}
+
+.top img{
+    align-content: center;
+    width: 75%;
+
+}
+
+.imgClass {
+   height: 100%;
+   padding: 2em;
+    margin: 0 auto;
+}
+
+.imgSide{
+
+}
+
+.imgContainer{
+
+}
+
+h2{
+    color: blue;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#button{
+    margin: 0 auto;
+
+}
+
+ div nav {
+    text-align: center;
+}
+
+p {
+    font-size: 2rem;
+    text-align: center;
+    height: 40%
+}
+
+.topDiv{
+    text-align: center;
+    
+    width: 40%
+}
+
+
+
+
+
+
