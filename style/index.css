@@ -1,9 +1,56 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 *{
     box-sizing: border-box;
     max-width: 100%;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
 }
 
 html{
@@ -12,14 +59,18 @@ html{
 
 
 /*header styles*/
+#headerBackground{
+    background-image: url("images/pexels-pixabay.jpg");
+
+    }
+
 header{
     width: 100%;
-    background-image:url("pexels-pixabay.jpg");
 }
 
 header{
-    border: 1px solid red;
-    background-color: gainsboro;
+    /*border: 1px solid red;*/
+    
     
 }
 
@@ -35,7 +86,8 @@ a {
     text-decoration: none;
     font-size: 2rem;
     background-color: grey;
-    color: #ffffff;
+    border-radius: 50%;
+    color: blue;
 }
 
 a:hover{
@@ -67,13 +119,20 @@ nav a{
 
 .top{
     display:flex;
+    flex-direction: row;
     width: 40%;
    
 }
 
+.topdiv{
+    width: 100%; 
+    align-text: center;   
+}
+
+
 .top img{
     align-content: center;
-    width: 75%;
+    width: 100%;
 
 }
 
@@ -98,6 +157,10 @@ h2{
     align-items: center;
 }
 
+nav a{
+    padding: 15px;
+}
+
 
 
  div nav {
@@ -111,10 +174,14 @@ p {
 }
 
 .topDiv{
-    
+    margin: 20px 20px;
     align-content: center;
     width: 40%;
     background-color: lightgrey;
+}
+
+div h2{
+    margin-top: 20px;
 }
 
 /*lower center*/
@@ -125,14 +192,12 @@ p {
     flex-flow: row wrap;  
 }
 
-
 .imgBox{
     margin: 5px;
     padding: 5px;
     display: flex; 
+    flex-direction: row;
     align-content: center;
-    
-    
 }
 
 h2{
@@ -156,8 +221,226 @@ h2{
 }
 
 .lower{
-    ;
+
 }
+
+/*tablet view*/
+
+@media(max-width: 800px){
+
+
+h1{
+    color:red;
+}
+
+a {
+    font-size: 1.5rem;
+    background-color:black;
+    border-radius: 50%;
+    color: red;
+}
+
+a:hover{
+    background-color: red;
+    color: lightgrey;
+}
+
+nav{
+    display: flex;
+    /*justify-content: wrap-around;*/
+    padding: .5% 0% 0% 0%;
+    margin: 0;
+    background-color: blue;
+}
+
+nav a{
+    display: inline-block;
+}
+
+/*Top center section*/
+
+.topCenter{
+    display: flex;
+    background-color: black;
+}
+
+.top{
+    display:flex;
+    width: 90%; 
+}
+
+h2{
+    color: red;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.topDiv{
+    margin: 20px 20px;
+    align-content: center;
+    width: 40%;
+    background-color: lightgrey;
+}
+
+/*lower center*/
+
+h2{
+    text-align: center;
+    width: 100%;
+    font-size: 3em;
+    color: red;
+}
+
+  section nav{
+    text-align: center;
+    width: 100%;
+}
+
+.lower h2{
+    margin-bottom: 25px;
+}
+}
+
+/*mobile view*/
+
+@media(max-width: 500px){
+    
+    header{
+        display: flex;
+        justify-content: space-around ;
+        width: 40%;
+    }
+    
+    h1{
+        color:red;
+    }
+    
+    a:hover{
+        background-color: red;
+        color: lightgrey;
+    }
+    
+    nav{
+        display: flex;
+    }
+    
+    /*Top center section*/
+    .topCenter{
+        background-color: black;
+    }
+    
+    .top{
+        display:flex;
+        flex-direction: column;
+        width: 90%;  
+    }
+    
+    .top img{
+        align-content: center;/*test this class for image flex*/
+        width: 75%;
+    }
+    
+    .imgClass {
+       height: 100%;
+       padding: 2em;
+        margin: 0 auto;
+    }
+    
+    }
+    
+    h2{
+        color: red;
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    #button{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav a{
+        padding: 15px;
+    }
+    
+    
+    
+     div nav {
+        text-align: center;
+        
+    }
+    
+    p {
+        font-size: 2rem;
+        text-align: center;
+        height: 40%
+    }
+    
+    .topDiv{
+        margin: 20px 20px;
+        align-content: center;
+        width: 40%;
+        background-color: lightgrey;
+    }
+    
+    div h2{
+        margin-top: 20px;
+    }
+    
+    /*lower center*/
+    .imagesFlex{
+        height:100%;
+        width: 100%;
+        align-content: center;
+        flex-flow: row wrap;  
+        border: 3px solid black
+    }
+    
+    
+    .imgBox{
+        margin: 25px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column; 
+        align-content: center;
+        border: 1px dotted black;
+    }
+    
+    h2{
+        text-align: center;
+        width: 100%;
+        font-size: 3em;
+        color: red;
+    }
+    
+    #button2{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+      section nav{
+        text-align: center;
+        width: 100%;
+        padding:10px;
+    }
+
+    .lower h2{
+        margin-bottom: 25px;
+    }
+    }
+
+
+
+
+
+
+
+
+
 
 
 
